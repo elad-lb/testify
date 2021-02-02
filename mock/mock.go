@@ -118,21 +118,21 @@ func (c *Call) Panic(msg string) *Call {
 	return c
 }
 
-// Once indicates that that the mock should only return the value once.
+// Once indicates that the mock should only return the value once.
 //
 //    Mock.On("MyMethod", arg1, arg2).Return(returnArg1, returnArg2).Once()
 func (c *Call) Once() *Call {
 	return c.Times(1)
 }
 
-// Twice indicates that that the mock should only return the value twice.
+// Twice indicates that the mock should only return the value twice.
 //
 //    Mock.On("MyMethod", arg1, arg2).Return(returnArg1, returnArg2).Twice()
 func (c *Call) Twice() *Call {
 	return c.Times(2)
 }
 
-// Times indicates that that the mock should only return the indicated number
+// Times indicates that the mock should only return the indicated number
 // of times.
 //
 //    Mock.On("MyMethod", arg1, arg2).Return(returnArg1, returnArg2).Times(5)
